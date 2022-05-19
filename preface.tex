@@ -1,10 +1,11 @@
-\documentclass[a5paper,8pt]{scrbook}
+\documentclass[a5paper,fontsize=10pt]{memoir}
 \usepackage[
   top=2cm,bottom=2cm,
   inner=1.75cm,
   outer=1.25cm,
   textwidth=13cm
 ]{geometry}
+\strictpagecheck
 
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
@@ -26,23 +27,14 @@
 \fancyfoot[C]{}% Empty center footer
 \fancyfoot[R]{}% Empty left footer
 
-\title{Mineralwasser, reich an Hydrogencarbonat\\nach Art von\\Abraham van Stipriaan Luïsçius}
-\author{Thorsten van Stipriaan}
-\date{September 2021}
-
 \begin{document}
-
 \pagenumbering{gobble}
 
-\maketitle
-
-\newpage
-
 {\centering
-{\Large Vorwort}\vfill
+{\Large Vorwort}
+\vspace{2em}
 
 \begin{minipage}{4cm}
-  \centering
   \hrulefill\\
 \end{minipage}
 
@@ -80,58 +72,43 @@ oder, soweit wie möglich, modernere Terminologie anzubieten.
 Das Originaldokument von Dr. Friedr. Diel
 wird in diesem Jahr genau 222 Jahre alt.
 
-Die Motivation und das Pflichtgefühl dahinter ist
+Abgesehen von der Namensverwandschaft
+ist die Motivation und das Pflichtgefühl dahinter
 die Hoffnung,
 ähnlich die der von A. v. Stipriaan Luïsçius,
-dass sich mehr ``Landsleute'' informieren
-und ein mit wesentlichen nicht-organischen Salzen %essenziellen Spurenelementen
+dass sich mehr ``Landsleute'' informieren und ein
+mit wesentlichen nicht-organischen Salzen (Spurenelementen)
 angereichertes Wasser
-%für einen  gesundheitlichen Zustand
 in die alltägliche Anwendung bringen können.
 Beim Lesen habe ich ein einprägsames Gefühl für den Wert
 eines solchen Wassers bekommen,
-insbesondere durch den Charakter --
-sowohl den der damaligen Zeit, als auch den der Autoren.
+auch durch den speziellen Charakter der damaligen Zeit.
 
 Falls der Leser
 stellenweise an alten Formulierungsarten
-oder zu technischen Inhalten anecken sollte,
-ermutige ich diesen,
-solche Stellen zu überspringen und dort fortzusetzen,
+oder zu wissenschaftlichen Inhalten anecken
+sollte, ermutige ich diesen,
+solche Stellen zu überfliegen und dort fortzusetzen,
 wo wieder mehr Lesefluss möglich ist.
-Es lohnt sich meiner Meinung nach,
-dadurch ein Gefühl für die diskrete Dringlichkeit zu bekommen,
-welche heute mindestens so aktuell ist, wie damals.
-Die praktische Anwendung ist heutzutage um einiges einfacher,
-welche ich in nachfolgenden Kapiteln beschreiben werde.
-
-Wer sich berufen fühlt, dieser Schrift etwas beizutragen,
-ist herzlich willkommen, dieses auf Github
-\footnote{}
-unter der Common Creative Lizenz
-\footnote{}
-zu tun.\\
+Die Thematik ist heute mindestens so aktuell, wie damals.
+Die praktische Anwendung ist heutzutage nur um einiges einfacher,
+welche ich im Anhang näher beschreibe.
 
 \pagenumbering{Roman}
-\setcounter{page}{3}
+\setcounter{page}{1}
 
 Nachfolgend an die Transkription folgen:
 \begin{itemize}
+\item Herleitung der korrekten Maßumrechnungen
 \item Analyse der Vorgehensweise von A. v. Stipriaan Luïsçius
-in Grammatik, Begriffen und Werten der heutigen Zeit.
-\item Anmerkungen und Vergleiche zum heutzutage käuflichen
-sog. ``Staatl. Fachingen Wassers'',
+\item Anmerkungen und Vergleiche
+zum heutzutage käuflichen sog. ``Staatl. Fachingen Wassers'',
 um eine Perspektive aufzuzeigen,
 warum es dennoch sinnvoll sein kann,
-ein solches Wasser selber herzustellen
-oder alternative Angebote von Elektrolyt-Wasser zum Kauf anzubieten
+ein solches Wasser selber herzustellen oder
+alternative Angebote von Elektrolyt-Wasser zum Kauf anzubieten
 \item zeitgemäße Wege und Ansätze, ein qualitativ hochwertiges Wasser selber herzustellen
 \end{itemize}
-
-%Um letzterem eine echte und faire Chance zu geben,
-%sehe ich mittelfristig einem Crowd-Funding Projekt entgegen,
-%um solch ein heilsames Wasser für die Masse verfügbar zu machen,
-%da ich von dessen Wirksamkeit ebenfalls von ganzem Herzen überzeugt bin.
 
 Es war eine kleine Reise,
 erst das Dokument zu lesen,
@@ -151,8 +128,20 @@ war der ``Zauber'' kurz vorbei
 und dachte: \emph{wie einfach!}
 Und mit Hinblick auf moderne und alternative Forschungen
 konnte ich weitere Zusammenhänge erkennen und herstellen,
-wie bahnbrechend das Ganze selbst für unsere heutige Zeit ist,
-vorausgesetzt es würden sich genügend Menschen
+wie bedeutend das Ganze selbst für unsere heutige Zeit ist,
+darauf hoffend, dass sich mehr Menschen
 solches Wissen zu Eigen und Nutzen machen.
+
+Dieses Buch ist auf Github%
+\footnote{\href{https://github.com/gogolnr1/aqua-mephitica-alcalina}{https://github.com/gogolnr1/aqua-mephitica-alcalina}}
+unter der Creative Commons Lizenz%
+\footnote{CC BY-NC-SA (\href{https://creativecommons.org/licenses/by-nc-sa/3.0/de/}{https://creativecommons.org/licenses/by-nc-sa/3.0/de/})}
+inklusive Originaldokument
+zu finden.%
+%
+% if pagenumber uneven, make newpage
+\checkoddpage\ifoddpage
+  \newpage\strut
+  \pagenumbering{gobble}\fi
 
 \end{document}

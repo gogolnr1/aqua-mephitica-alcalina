@@ -1,10 +1,11 @@
-\documentclass[a5paper,8pt]{scrbook}
+\documentclass[a5paper,fontsize=10pt]{memoir}
 \usepackage[
   top=2cm,bottom=2cm,
   inner=1.75cm,
   outer=1.25cm,
   textwidth=13cm
 ]{geometry}
+\strictpagecheck
 
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
@@ -16,17 +17,17 @@
 \usepackage{fancyhdr}
 \usepackage{hyphenat}
 \usepackage{svg}
+\usepackage{xr-hyper}
 \usepackage{hyperref}
-\usepackage{tikz,xfrac}
+\usepackage{tikz}
+\usepackage{xfrac}
 \usepackage{marvosym}
 \usepackage{lmodern,xspace}
 \usepackage{ziffer}
 \usepackage{numprint}
 \usepackage{xfp}
 \usepackage[nomessages]{fp}
-\usepackage{xr-hyper}
 
-\usepackage{xr-hyper}
 \externaldocument{transcription}
 
 \renewcommand{\headrulewidth}{0pt}
@@ -37,10 +38,6 @@
 \fancyfoot[L]{}% Empty left footer
 \fancyfoot[C]{}% Empty center footer
 \fancyfoot[R]{}% Empty left footer
-
-\title{Mineralwasser reich an Hydrogencarbonat\\nach Art von\\Abraham van Stipriaan Luïsçius}
-\author{Thorsten Rudolf van Stipriaan}
-\date{September 2021}
 
 
 \makeatletter
@@ -78,11 +75,17 @@
 
 \begin{document}
 
-\section{Zu den Maßeinheiten}
+{\centering
+{\Large Anhang}
+\vspace{2em}
 
-%\begin{center}
-%\Large Zu den Maßeinheiten
-%\end{center}
+\begin{minipage}{4cm}
+  \hrulefill\\
+\end{minipage}
+
+}
+
+\section{Zu den Maßeinheiten}
 
 Auf Seite \pageref{units_value_page} gibt
 v. Stipriaan Luïsçius
@@ -90,32 +93,35 @@ Hinweise auf die tatsächlich anzuwendende Umrechnung.
 Er gibt an,
 dass 5 \sfrac{1}{3} Quentchen insgesamt 330 Gran,
 sowie 3 Quentchen 40 Gran 220 Gran seien.
-Diese Rechnungen%
+Diese Rechnungen
 %\footnote{\cftext 330 Gran / 62 = 5,32 Quentchen,
 %resp. 3 * 60 Grane + 40 Gran = 220 Grane}
-legt nahe, dass 1 Quentchen insgesamt 60 oder 62 sind,
-worauf es wikipedia.org keinerlei Hinweise gibt.\\
+legen nahe, dass 1 Quentchen insgesamt 60 oder 62 sind,
+wofür ich z.B. auch wikipedia.org keinerlei Hinweise gefunden habe.
 
-In den Büchern
-\emph{Philologisch-kritischer u. historischer Commentar
+Folgende Bücher habe ich zu diesem Thema gefunden
+und zum Vergleich herangezogen:
+\begin{itemize}
+\item \emph{Philologisch-kritischer u. historischer Commentar
 über die drey ersten Evangelien, Zweyter Theil}
 von Heinrich Eberhard Gottlob Paulus%
 \footnote{\href{https://books.google.de/books?id=-WPPudKsXE8C}
-{books.google.de/books?id=-WPPudKsXE8C}},
-\emph{Metrologische Tafeln über die alten Maaße,
+{books.google.de/books?id=-WPPudKsXE8C}}
+\item \emph{Metrologische Tafeln über die alten Maaße,
 Gewichte und Münzen Roms und Griechenlands}
 nach Romé de l'Isle,
 übersetzte von G. Große%
 \footnote{\href{https://books.google.de/books?id=DGs6AAAAcAAJ}
 {books.google.de/books?id=DGs6AAAAcAAJ}}
-und
-\emph{Johann Potters griechische Archäologie,
+\item \emph{Johann Potters griechische Archäologie,
 oder, Alterthümer Griechenlandes.
 Aus dem Engländischen übersetzt
 und mit Anmerkungen und Zusätzen vermehrt, Dritter Theil}
-von John Potter
-konnte ich allerdings Referenzen zu annähernden Wertzuschreibungen finden.
-Im ersteren heißt es auf den Seiten 679 u. 680:\\
+von John Potter%
+\footnote{\href{https://books.google.de/books?id=DQdAAQAAMAAJ}{books.google.de/books?id=DQdAAQAAMAAJ}}
+\end{itemize}
+In diesen konnte ich Referenzen zu annähernden Wertentsprechungen finden.
+Von \emph{Gottlob Paulus} heißt es auf den Seiten 679 u. 680:\\
 
 \emph{«Franz. Perez Bayer de numis hebraeo - samaritanis (1781.)
 welcher hier vorn. zu vergleichen wäre,
@@ -125,7 +131,7 @@ daß ein ganzer von Silber
 252 = viermal 63 grana (span. Apothekergewicht) wiegt,
 folgl. eine attische Drachme gerade 63 Gran gewogen habe.»}\\
 
-Im zweiten heißt es auf Seite 25 in Fußnote p):\\
+\emph{De l'Isle} schreibt auf Seite 25 in Fußnote p):\\
 
 \emph{«Man sehe die obengedachten verschiedenen Systeme.
 Jacob Lapelle aber macht hier eine Ausnahme.
@@ -141,7 +147,8 @@ und lässt sich folgendermaßen herleiten:\\
 
 \noindent
 \begin{minipage}{\linewidth}
-	\FPeval\scruplesofquentins{21} %round((63/3):0}
+\footnotesize
+\FPeval\scruplesofquentins{21} %round((63/3):0}
 \begin{tabbing}
 Zeroooo  \= Oneeeeeeeeeeeee \= Twoooooooooooo    \= Threeeeeeeeeeeeeeee \= Fourrrrrrrrrrrrrrrrrr \= Five      \kill
          \>  \'             \>  \'               \> 1\'Drachme          \>   3\'Skrupel (x\scruplesofquentins)    \>  63\'Gran \\
@@ -156,8 +163,7 @@ für das römische Pfund%
 \footnote{Siehe Seite VII der Vorrede des Übersetzers.},
 jedoch auf eigenem Wege der Gewichtsbestimmung,
 ohne mit 252 Gran als Basiswert
-für ein Silberschekel (vier Drachmen) zu arbeiten.\\
-
+für ein Silberschekel (vier Drachmen) zu arbeiten.
 Hofrath Kästner korrigiert im Anhang mathematisch
 den Wert eines römischen Pfundes auf 6024,1 Gran.
 Allerdins schreibt er auch:\\
@@ -176,7 +182,8 @@ alter Goldmünzen gefundenes römisches Pfund genau dasselbe,
 das man durch die obige Berechnung erhält
 und muß daher das richtige und Wahre sein.»}\\
 
-Im dritterwähnten Buch heißt es auf Seite 155:\\
+Im dritterwähnten Buch von \emph{Johann Potters}
+heißt es auf Seite 155:\\
 
 \emph{«Eben diese Summe%
 \footnote{744 Pence = 5952 Gran bzw. 1 Pence = 8 Gran,
@@ -201,8 +208,15 @@ zu dem ich eine Referenz finden konnte,
 bzgl. der von A. v. Stipriaan Luïsçius angestellten Untersuchungen.%
 \footnote{Für 63 Gran pro Quentchen
 hätte er 5\sfrac{1}{4} anstatt 5\sfrac{1}{3} Quentchen
-für 330 Gran angeben müssen, resp. 3 Qu. 40 Gr. hätten 226 oder 229 Gran ergeben müssen, wären 62 resp. 63 Gran die Basis für ein Quentchen.}
-Allerdings erscheint mir der Wert von 63 Gran pro Quentchen -- wie im obigen Zitat erwähnt -- der wahre zu sein, und kleinere Messfehler bzw. Übertragungsfehler Seitens Luïsçius wären wohl auch nicht ganz auszuschließen. Daher entschied ich mich dazu, für alle weiteren Berechnungen von eben diesen 63 Gran pro Quentchen auszugehen. Das heißt also für die Übersicht:\\
+für 330 Gran angeben müssen,
+resp. 3 Qu. 40 Gr. hätten 226 oder 229 Gran ergeben müssen,
+wären 62 resp. 63 Gran die Basis für ein Quentchen.}
+Allerdings erscheint mir der Wert von 63 Gran pro Quentchen --
+wie im obigen Zitat erwähnt --
+der wahre zu sein,
+und kleinere Abweichungen in den Mess- bzw. Kontrollgewichten
+%kleinere Messfehler bzw. Übertragungsfehler Seitens Luïsçius
+sind auch nicht ganz auszuschließen. Daher entschied ich mich dazu, für alle weiteren Berechnungen von eben diesen 63 Gran pro Quentchen auszugehen. Das heißt also für die Übersicht:\\
 
 \noindent
 \begin{minipage}{\linewidth}
@@ -246,7 +260,7 @@ Zr \= Oneeeeeeeeeeeeeeeeeeeeeee \= Twooo                 \kill
 \FPeval\y{round(330*\gramofgran:2)}
 Wenn also z.B. von 4 \Pfund\kern+0.14em Wasser die Rede ist,
 ergeben sich daraus umgerechnet \numprint{\x} Liter;
-bei bsw. 330 Gran ergeben sich umgerechnet \numprint{\y} Gramm.\\
+bei bsw. 330 Gran ergeben sich umgerechnet \numprint{\y} Gramm.
 
 % 1 Kubikzoll (Pariser) = \sfrac{10}{9} Kubikzoll (Rheinl.) = 19,8364 cm³ = ca. 1/50000 m³%
 Da nicht eindeutig aus dem Dokument hervorgeht,
@@ -257,7 +271,7 @@ was umgerechnet \numprint{\cubiccmofcubicinch} cm³ oder ca. 1/50000 m³ entspri
 \footnote{\href{https://web.archive.org/web/20210919211741/https://de.wikipedia.org/wiki/Pariser_Kubikzoll}
 {de.wikipedia.org/wiki/Pariser\textunderscore Kubikzoll}}
 %-- zumal es für seine eigenen Untersuchungen nicht von Belang ist.
-\vfill
+%\vfill
 
 \section{Analyse}
 
@@ -267,7 +281,7 @@ Natriumhydrogencarbonat dem Körper zuzuführen,
 wird angeführt,\xspace
 \mbox{ca. \numprint{\x} Gramm} Natron in einen halben Liter Wasser zu geben
 und von der Lösung jeweils einen Löffel seinem Trinkwasser hinzuzufügen --
-zum Beispiel ein Teelöffel auf ein Glas gutes Wasser.\\
+zum Beispiel ein Teelöffel auf ein Glas gutes Wasser.
 
 \FPeval\x{round(4*\literofpound:1)}%
 Es wird dann hervorgehoben,
@@ -321,7 +335,7 @@ So hatte man schließlich auf \mbox{\numprint{\a} ml} Wasser
 \mbox{\numprint{\x} mg} natürliches
 und \mbox{\numprint{\x} mg} künstlich hinzugefügtes Kaliumcarbonat,
 bzw. insgesamt -- incl. Kochsalz, Kalkerde, Bittersalz, Lithium und Eisensalz --
-\mbox{ca. \numprint{\y} g} Mineralsalze.\\
+\mbox{ca. \numprint{\y} g} Mineralsalze.
 
 Für größt mögliche Flexibilität in der Anwendung wird hier vorgeschlagen,
 selber das Kaluimcarbonat mit Kohlensäure so zu sättigen,
@@ -331,7 +345,8 @@ welches nach Bedarf dem Wasser hinzugefügt werden kann.\\
 Die Herstellung dieses Salzes erfolgte wohl folgendermaßen:
 
 \begin{center}
-\includegraphics[width=6cm, natwidth=640, natheight=480]{figures/setting.svg}
+[ GRAFIK EINFÜGEN ]
+%\includegraphics[width=6cm, natwidth=640, natheight=480]{figures/setting.svg}
 %\includesvg[width = 6cm]{figures/setting}
 \end{center}
 
@@ -360,12 +375,12 @@ in welchem sich dann in der Reaktion
 Wobei sich das K$_2$C$_2$O$_5$ Salz an der Oberfläche der Lösung gebildet hat,
 während sich das Wasser vermutlich am Boden des Behältnisses sammelte.}
 die man dann von der Oberfläche des Weinsteinöls
-sowie der Innenwand des Glasbehälters entnehmen konnte und auf Löschpapier getrocknet hat.\\
+sowie der Innenwand des Glasbehälters entnehmen konnte und auf Löschpapier getrocknet hat.
 
 \FPeval\a{round(16*\gramofounce:0)}%
 \FPeval\x{round(80*\gramofgran:1)}%
 \FPeval\y{round(120*\gramofgran:1)}%
-Dieses Kristallsalz wird hier als ˙˙Mittelsalz'' bezeichnet, was meines Erachtens soviel bedeutet, dass das Kaliumcarbonat des Weinsteinöls so sehr mit CO$_2$ gesättigt wird, dass sein salziger Geschmack dabei fast nicht mehr wahrzunehmen ist. Mit diesem Mittelsalz kann man dann beliebig hantieren, sprich in diesem Fall wurden\xspace \numprint{\x} g davon in \numprint{\a} ml Wasser getan, ohne dass der Geschmack sich drastisch geändert hätte; zur Not kann das sogar bis zu \numprint{\y} g hoch getrieben werden.\\
+Dieses Kristallsalz wird hier als ˙˙Mittelsalz'' bezeichnet, was meines Erachtens soviel bedeutet, dass das Kaliumcarbonat des Weinsteinöls so sehr mit CO$_2$ gesättigt wird, dass sein salziger Geschmack dabei fast nicht mehr wahrzunehmen ist. Mit diesem Mittelsalz kann man dann beliebig hantieren, sprich in diesem Fall wurden\xspace \numprint{\x} g davon in \numprint{\a} ml Wasser getan, ohne dass der Geschmack sich drastisch geändert hätte; zur Not kann das sogar bis zu \numprint{\y} g hoch getrieben werden.
 
 \FPeval\a{round(16*\gramofounce:0)}%
 \FPeval\x{round(22.5*\gramofgran:1)}%
@@ -379,16 +394,15 @@ und \numprint{\y} g resp. \numprint{\z} g künstlich hinzugefügtes planzliches 
 \FPeval\y{round(330*\gramofgran:1)}%
 Auf das Volumen eines damaligen Kruges --\xspace
 \mbox{ca. \numprint{\a} Liter} -- hochgerechnet,
-wären das insgesamt \numprint{\x} g resp. \numprint{\y} g Kaliumhydrogencarbonat. \\
+wären das insgesamt \numprint{\x} g resp. \numprint{\y} g Kaliumhydrogencarbonat.
 
 \FPeval\x{round(16*\gramofounce:0)}%
 \FPeval\x{round(3*\gramofgran*1000:0)}%
-Das rein mineralische Kaliumhydrogencarbonat hat einen weicheren Geschmack und würde von Einigen bevorzugt werden. Wenn man dieses auf ähnliche Weise wie oben beschrieben vit CO$_2$ sättigen würde, könne man davon \numprint{\x} mg in \numprint{\a} ml Wasser hinzugeben, ohne eine Geschmacksveränderung warzunehmen -- so Luïsçius.\\
+Das rein mineralische Kaliumhydrogencarbonat hat einen weicheren Geschmack und würde von Einigen bevorzugt werden. Wenn man dieses auf ähnliche Weise wie oben beschrieben vit CO$_2$ sättigen würde, könne man davon \numprint{\x} mg in \numprint{\a} ml Wasser hinzugeben, ohne eine Geschmacksveränderung warzunehmen -- so Luïsçius.
 
-Diese Art der Gewinnung von gesättigtem Kaliumhydrogencarbonat sei zwar recht aufwendig, doch man hätte damit die Möglichkeit, schnell ein Heilwasser von gehobener Potenz herzustellen, was die Nachteile überwiege -- insbesondere, wenn die Nachfrage steigen und das Kosten - Nutzen Verhältnis sich daher positiver gestalten würde.\\
+Diese Art der Gewinnung von gesättigtem Kaliumhydrogencarbonat sei zwar recht aufwendig, doch man hätte damit die Möglichkeit, schnell ein Heilwasser von gehobener Potenz herzustellen, was die Nachteile überwiege -- insbesondere, wenn die Nachfrage steigen und das Kosten - Nutzen Verhältnis sich daher positiver gestalten würde.
 
-
-\newpage
+%\newpage
 
 \section{Mögliche Fertigungsarten für die heutige Zeit}
 
@@ -409,46 +423,53 @@ und hätte auch so eine Weinsteinöl%
 
 Hoch alkalisches Wasser bedeutet Wasser mit einem ppm Wert nahe 0 und möglichst geringer ``saurer'' Sättigung, also negativ ionisiert bzw. mit einem hohen Anteil an molekularem Wasserstoff (H$_2$) -- was in heutiger Zeit auch als sog. ``EZ-Wasser''%
 \footnote{``exclusion zone''}
-bekannt ist. Um dieses Herzustellen gibt es verschiedene technische und nicht-technische Varianten. Die sicherste, aber auch kostspieligste Art und Weise wäre, sich ein Gerät zu besorgen, welches sog. Kangen-Wasser herstellt. Dieses Gerät trennt effektiv positiv geladene Teilchen und gesättigte Salze von ionisiertem Wasser. Wenn das Gerät auf die höchste Stufe eingestellt ist, kommt aus dem Hahn also ein sauberes Wasser mit einem Ph-Wert von 11 oder mehr heraus. Um daraus gutes Weinsteinöl herzustellen, sollte man schon beim Auslassen des Wassers die Weinstein/Weinsäure Mischung in großer Menge in das zu befüllende Gefäß geben, damit das Wasser keine Zeit hat, sich aus der Luft wieder mit Sauerstoff zu sättigen.\\
+bekannt ist. Um dieses Herzustellen gibt es verschiedene technische und nicht-technische Varianten. Die sicherste, aber auch kostspieligste Art und Weise wäre, sich ein Gerät zu besorgen, welches sog. Kangen-Wasser herstellt. Dieses Gerät trennt effektiv positiv geladene Teilchen und gesättigte Salze von ionisiertem Wasser. Wenn das Gerät auf die höchste Stufe eingestellt ist, kommt aus dem Hahn also ein sauberes Wasser mit einem Ph-Wert von 11 oder mehr heraus. Um daraus gutes Weinsteinöl herzustellen, sollte man schon beim Auslassen des Wassers die Weinstein/Weinsäure Mischung in großer Menge in das zu befüllende Gefäß geben, damit das Wasser keine Zeit hat, sich aus der Luft wieder mit Sauerstoff zu sättigen.
 
-Für das Einflößen von CO$_2$ in das Weinsteinöl, für die Herstellung des o.g. Mittelsalzes, gibt es heute einfachere Methoden. Man kann sich dafür eines gewöhnlichen \emph{Wasser-Max}es bedienen -- dazu geht man einfach nach Anleitung vor, also so, als würde man gewöhnliches Wasser mit Kohlensäure versetzen wollen. Doch anstatt Wasser zu verwenden, füllt man das das Behältnis mit unserem hergestellten Weinsteinöl und drückt dann das CO$_2$ in den Behälter. Somit sollte der gleiche Effekt erzielt werden, wie der von Luïsçius' Aufbau; und es sollten sich Kristalle im Behältnis bilden, welche das sog. Mittelsalz ausmachen, nachdem die Kristalle auf gewöhnlichem Löschpapier getrocknet wurden.\\
+Für das Einflößen von CO$_2$ in das Weinsteinöl, für die Herstellung des o.g. Mittelsalzes, gibt es heute einfachere Methoden. Man kann sich dafür eines gewöhnlichen \emph{Wasser-Max}es bedienen -- dazu geht man einfach nach Anleitung vor, also so, als würde man gewöhnliches Wasser mit Kohlensäure versetzen wollen. Doch anstatt Wasser zu verwenden, füllt man das das Behältnis mit unserem hergestellten Weinsteinöl und drückt dann das CO$_2$ in den Behälter. Somit sollte der gleiche Effekt erzielt werden, wie der von Luïsçius' Aufbau; und es sollten sich Kristalle im Behältnis bilden, welche das sog. Mittelsalz ausmachen, nachdem die Kristalle auf gewöhnlichem Löschpapier getrocknet wurden.
 
-An dieser Stelle nochmal der Hinweis, dass diese Schrift auf Github für alle zur Verfügung steht und Menschen mit tiefer gehenden Erfahrungen im Bereich der Chemie äußerst willkommen sind, den Inhalt hier zu vervollständigen bzw. zu korrigieren.
+An dieser Stelle nochmal der Hinweis, dass dieses
+Buch auf Github für alle zur Verfügung steht und
+Menschen mit tiefer gehenden Erfahrungen
+im Bereich der Chemie äußerst willkommen sind,
+den Inhalt hier zu vervollständigen bzw. zu korrigieren.
 
-\newpage
+%\newpage
 
 \section{Weiterführende Gedanken}
 
-Um dem Ganzen noch die Krone auszusetzen, könnte man sich Methoden überlegen, das Mittelsalz mit zusätzlichen Elektrolyten zu versehen. Bisher enthält das Mittelsalz nur Kalium und Calcium aus dem Weinstein, als elementares Elektrolyt. Um dieses jedoch \emph{so} zu betreiben, dass auch ein angemessenes Verhältnis der jeweiligen Elektrolyte zueinander herrscht, bedarf es weiteren Nachforschungen, die ich an dieser Stelle noch nicht tätigen konnte -- geschweige denn selber Experimente durchzuführen, die dies alles in der Praxis zeigen könnten.\\
+Um dem Ganzen noch die Krone auszusetzen, könnte man sich Methoden überlegen, das Mittelsalz mit zusätzlichen Elektrolyten zu versehen. Bisher enthält das Mittelsalz nur Kalium und Calcium aus dem Weinstein, als elementares Elektrolyt. Um dieses jedoch \emph{so} zu betreiben, dass auch ein angemessenes Verhältnis der jeweiligen Elektrolyte zueinander herrscht, bedarf es weiteren Nachforschungen, die ich an dieser Stelle noch nicht tätigen konnte -- geschweige denn selber Experimente durchzuführen, die dies alles in der Praxis zeigen könnten.
 
-Was mir dazu allerdings in den Sinn kommt, wäre, die sog. Schüssler-Salze in empfohlener Zusammensetzung und in entsprechender Quantität zu nehmen, diese in das Gefäß zu geben, in welches das Kangen-Wasser gefüllt wird, und somit ein ``Weinsteinöl-\emph{Plus}'' zu erhalten, welches dann nach beschriebener Art mit Kohlensäure versetzt ein Mittelsalz-\emph{Plus} ergeben dürfte. Diese könnte man dann nach Belieben entweder in Wasser auflösen oder in seinen Joghurt geben, und sich so seine tägliche Dosis Elektrolyte zuführen.\\
+Was mir dazu allerdings in den Sinn kommt, wäre, die sog. Schüssler-Salze in empfohlener Zusammensetzung und in entsprechender Quantität zu nehmen, diese in das Gefäß zu geben, in welches das Kangen-Wasser gefüllt wird, und somit ein ``Weinsteinöl-\emph{Plus}'' zu erhalten, welches dann nach beschriebener Art mit Kohlensäure versetzt ein Mittelsalz-\emph{Plus} ergeben dürfte. Diese könnte man dann nach Belieben entweder in Wasser auflösen oder in seinen Joghurt geben, und sich so seine tägliche Dosis Elektrolyte zuführen.
 
-Alternativ kauft man sich einfach direkt ein Elektrolyt Ergänzungsmittel beim Händler seines Vertrauens und tut davon etwas in sein Wasser. Wobei ich die Erfahrung gemacht habe, dass das Wasser dadurch eben einen sehr unangenehmen Geschmack erhält. Hier würde ich folgendes probieren: Umkehrosmosewasser mit dem Wassermax ``sauer'' machen und dort die gekauften Elektrolyte hinzufügen, dieses sollte die Säure neuralisieren und für einen relativ geschmacksneutrales Elekrolytwasser sorgen. Oder eher: die Elektrolyte -- welche ja nichts anderes sind, als Mineralsalze -- vorher in das Behältnis geben, in welches das Kangenwasser läuft, und dieses dann mit dem Wassermax strukturell und geschmacklich stabilisieren.\\
+Alternativ kauft man sich einfach direkt ein Elektrolyt Ergänzungsmittel beim Händler seines Vertrauens und tut davon etwas in sein Wasser. Wobei ich die Erfahrung gemacht habe, dass das Wasser dadurch eben einen sehr unangenehmen Geschmack erhält. Hier würde ich folgendes probieren: Umkehrosmosewasser mit dem Wassermax ``sauer'' machen und dort die gekauften Elektrolyte hinzufügen, dieses sollte die Säure neuralisieren und für einen relativ geschmacksneutrales Elekrolytwasser sorgen. Oder eher: die Elektrolyte -- welche ja nichts anderes sind, als Mineralsalze -- vorher in das Behältnis geben, in welches das Kangenwasser läuft, und dieses dann mit dem Wassermax strukturell und geschmacklich stabilisieren.
 
-Besonders für Freunde des regelmäßigen Fastens dürfte dieses ein sehr willkommenes Mittel sein, um in der Fastenzeit mit den lebensnotwendigen Spurenelementen versorgt zu werden. Fasten führt -- richtig durchgeführt -- zwar zu dem erwünschten Effekt, dass sich der Körper durch Stoffwechselanpassung aus körpereigenen organischen und nicht-organischen "Rücklagen" bedient und sich so auch indirekt selber entgiftet. Sind diese Rücklagen jedoch aufgebraucht, ist eine externe Versorgung von nicht-organischen Mineralsalzen absolut notwendig, damit Körper und Geist keinen Schaden nehmen. Im äußersten Fall reagiert der Körper bei Mangel an gerade benötigten Mineralsalzen immer mit Fieber, um die Stoffe aufwendig aus Knochensubstanz und -mark "auszukochen" -- was nebenbei zu beschleunigtem Abbau der Knochendichte, namentlich Osteoporose oder Ähnlichem, führen kann.\\
+Besonders für Freunde des regelmäßigen Fastens dürfte dieses ein sehr willkommenes Mittel sein, um in der Fastenzeit mit den lebensnotwendigen Spurenelementen versorgt zu werden. Fasten führt -- richtig durchgeführt -- zwar zu dem erwünschten Effekt, dass sich der Körper durch Stoffwechselanpassung aus körpereigenen organischen und nicht-organischen "Rücklagen" bedient und sich so auch indirekt selber entgiftet. Sind diese Rücklagen jedoch aufgebraucht, ist eine externe Versorgung von nicht-organischen Mineralsalzen absolut notwendig, damit Körper und Geist keinen Schaden nehmen. Im äußersten Fall reagiert der Körper bei Mangel an gerade benötigten Mineralsalzen immer mit Fieber, um die Stoffe aufwendig aus Knochensubstanz und -mark "auszukochen" -- was zu beschleunigtem Abbau der Knochendichte, namentlich Osteoporose oder Ähnlichem, führen kann.
+%% stop here
+%\newpage
 
-\newpage
+%\section{Was tatsächlich im Körper geschieht}
 
-\section{Was tatsächlich im Körper geschieht}
+%Jede Art von Nahrungszufuhr bedeutet Energieaufwand, die der Körper aufbringen muss, um das ``Gute'' vom ``Schlechten'' zu trennen. Die Abfallprodukte dieses Prozesses werden über Kot, Urin, Haut, Schleimhäute und Atem abgesondert. Würde man dem Körper lediglich die notwendigen \emph{Informationen} zukommen lassen, sprich Wasserstoff \emph{von} Kalium, Wasserstoff \emph{von} Magnesium, Wasserstoff \emph{von} Selenium, Wasserstoff \emph{von} Calcium u.s.w., könnte er theoretisch fort existieren, \emph{ohne} diese aufwendigen Absonderungsprozesse durchführen zu müssen.\\
 
-Jede Art von Nahrungszufuhr bedeutet Energieaufwand, die der Körper aufbringen muss, um das ``Gute'' vom ``Schlechten'' zu trennen. Die Abfallprodukte dieses Prozesses werden über Kot, Urin, Haut, Schleimhäute und Atem abgesondert. Würde man dem Körper lediglich die notwendigen \emph{Informationen} zukommen lassen, sprich Wasserstoff \emph{von} Kalium, Wasserstoff \emph{von} Magnesium, Wasserstoff \emph{von} Selenium, Wasserstoff \emph{von} Calcium u.s.w., könnte er theoretisch fort existieren, \emph{ohne} diese aufwendigen Absonderungsprozesse durchführen zu müssen.\\
+%Wenn man also z.B. Kaliumhydrogencarbonat hat, ist dort Kalium als Information selbst, Wasser als Informations\emph{träger} und Carbonat als feste Materie zur Stabilisierung des Ganzen vorhanden. Hier kann man wunderbar die chinesische Analogien des Tao anwenden. Wasser ist Jing -- das \emph{Wie} --, Kalium ist Qi -- das \emph{Was} -- und Carbon ist das Shen -- das \emph{Wodurch}. Das stabile Produkt ist \emph{Tao}.\\
 
-Wenn man also z.B. Kaliumhydrogencarbonat hat, ist dort Kalium als Information selbst, Wasser als Informations\emph{träger} und Carbonat als feste Materie zur Stabilisierung des Ganzen vorhanden. Hier kann man wunderbar die chinesische Analogien des Tao anwenden. Wasser ist Jing -- das \emph{Wie} --, Kalium ist Qi -- das \emph{Was} -- und Carbon ist das Shen -- das \emph{Wodurch}. Das stabile Produkt ist \emph{Tao}.\\
+%Der Körper hat also dieses Kaliumhydrogencarbonat zur Verfügung, er nimmt sich das Wasserstoff \emph{von} Kalium, also Kalium-strukturierter Wasserstoff, und befördert es zu den Zellen, die dieses gerade benötigen -- das Carbon bleibt dabei übrig und muss wieder ausgeschieden werden, beispielsweise über den Atem als {\bf C}O$_2$.\\
 
-Der Körper hat also dieses Kaliumhydrogencarbonat zur Verfügung, er nimmt sich das Wasserstoff \emph{von} Kalium, also Kalium-strukturierter Wasserstoff, und befördert es zu den Zellen, die dieses gerade benötigen -- das Carbon bleibt dabei übrig und muss wieder ausgeschieden werden, beispielsweise über den Atem als {\bf C}O$_2$.\\
+%Genau dieses kann man -- \emph{theoretisch} -- erreichen, indem man das hoch alkalische Wasser mit allen wichtigen Elektrolysalzen sättigt und den Körper sofort zuführt -- oder das Ganze mit CO$_2$ stabilisiert resp. geschmacklich verträglicher und somit für einen späteren Verzehr haltbar machen -- dann aber eben mit erhöhtem Verarbeitungs- und Absonderungsaufwand. Dass das so für die Wenigsten, und ohnehin mit heutigen Mitteln noch schwer umzusetzen ist, ist absolut klar -- dazu braucht es wohl noch ein paar Jahrzehnte oder so, bis wir uns gesellschaftlich in solch einer Denkstruktur wiederfinden werden. Also wieder zurück zur ``harten Realität''.\\
 
-Genau dieses kann man -- \emph{theoretisch} -- erreichen, indem man das hoch alkalische Wasser mit allen wichtigen Elektrolysalzen sättigt und den Körper sofort zuführt -- oder das Ganze mit CO$_2$ stabilisiert resp. geschmacklich verträglicher und somit für einen späteren Verzehr haltbar machen -- dann aber eben mit erhöhtem Verarbeitungs- und Absonderungsaufwand. Dass das so für die Wenigsten, und ohnehin mit heutigen Mitteln noch schwer umzusetzen ist, ist absolut klar -- dazu braucht es wohl noch ein paar Jahrzehnte oder so, bis wir uns gesellschaftlich in solch einer Denkstruktur wiederfinden werden. Also wieder zurück zur ``harten Realität''.\\
+%Es heißt heutzutage, dass man beim intensiven Sport-treiben Elektrolyte ausschwitzt, weshalb sich Sportler diese ihrem Körper wieder zuführen sollten. Das mit dem Ausschwitzen stimmt insofern, dass der Körper das Feste vom Wasser trennt und es als Abfallprodukt über die Schweißdrüsen ausscheidet, da der Atem bereits gesättigt ist und die Nieren auch schon auf Hochtouren arbeiten. Wenn der Schweiß ``süß'' oder neutral schmeckt, bedeutet das, dass der saure Kohlenstoff gerade mit genügend alkalischem Salz harmonisiert wurde, damit die Haut nicht zu sehr gereizt wird. Wenn der Schweiß eher salzig schmeckt, sondert der Körper zusätzliche alkalische Salze ab, die ohnehin zu viel vorhanden sind, und die er währen der derzeitigen Stresssituation schnellst möglich loswerden muss.\\
 
-Es heißt heutzutage, dass man beim intensiven Sport-treiben Elektrolyte ausschwitzt, weshalb sich Sportler diese ihrem Körper wieder zuführen sollten. Das mit dem Ausschwitzen stimmt insofern, dass der Körper das Feste vom Wasser trennt und es als Abfallprodukt über die Schweißdrüsen ausscheidet, da der Atem bereits gesättigt ist und die Nieren auch schon auf Hochtouren arbeiten. Wenn der Schweiß ``süß'' oder neutral schmeckt, bedeutet das, dass der saure Kohlenstoff gerade mit genügend alkalischem Salz harmonisiert wurde, damit die Haut nicht zu sehr gereizt wird. Wenn der Schweiß eher salzig schmeckt, sondert der Körper zusätzliche alkalische Salze ab, die ohnehin zu viel vorhanden sind, und die er währen der derzeitigen Stresssituation schnellst möglich loswerden muss.\\
+%Im Klartext: der Körper kann eigentlich nur (informiertes) ionisiertes Wasser gebrauchen, welches dazu dient, die Kommunikationsfähigkeit der Zellen zu gewährleisten -- in anderen Worten: die Elektrizität gut durch den Körper fließen kann; [denn wie wir wissen, leitet Salzwasser (in dem Fall nur ionisiertes Wasser) Elektrizität am besten.] \\
 
-Im Klartext: der Körper kann eigentlich nur (informiertes) ionisiertes Wasser gebrauchen, welches dazu dient, die Kommunikationsfähigkeit der Zellen zu gewährleisten -- in anderen Worten: die Elektrizität gut durch den Körper fließen kann; [denn wie wir wissen, leitet Salzwasser (in dem Fall nur ionisiertes Wasser) Elektrizität am besten.] \\
+%Der Schlüssel ist also das richtige Verhältnis und die richtige Menge der entsprechenden Salze. Proteine sind nichts weiter als Salze in einer entsprechenden chemischen Zusammensetzung. Während Fette Kohlen-Sauerstoffverbindungen sind, welche gesättigt nützliche oder weniger nützliche Salze enthalten \emph{können}, während sie in ungesättigter Form einem leichteren Abtransport von festen Stoffen im Körper dienen.\\
 
-Der Schlüssel ist also das richtige Verhältnis und die richtige Menge der entsprechenden Salze. Proteine sind nichts weiter als Salze in einer entsprechenden chemischen Zusammensetzung. Während Fette Kohlen-Sauerstoffverbindungen sind, welche gesättigt nützliche oder weniger nützliche Salze enthalten \emph{können}, während sie in ungesättigter Form einem leichteren Abtransport von festen Stoffen im Körper dienen.\\
+%Das ist auch der Grund, warum eine sog. ``Low-Carb'' Ernährung so gut funktioniert. Damit sind allerdings nur \emph{die} Carbs bzw. Kohlenstoffe gemeint, welche übermäßig mit sauren Salzen gesättigt sind, mit welchen der Körper schwerer zurecht kommt, da sie den Informationsfluss hemmen. Die basischen oder ungesättigten Carbs sind da eher von Nutzen, da sie den Körper sowohl mit Energie versorgen als auch bei der Entgiftung unterstützen. Der Körper kann zwar auch saure Carbs metabolisieren (was bei den Meisten eben auch der Fall ist), doch das hängt mit Nebeneffekten zusammen, die sich langfristig krankhaft (dis-eased) auf Körper und Geist auswirken.
 
-Das ist auch der Grund, warum eine sog. ``Low-Carb'' Ernährung so gut funktioniert. Damit sind allerdings nur \emph{die} Carbs bzw. Kohlenstoffe gemeint, welche übermäßig mit sauren Salzen gesättigt sind, mit welchen der Körper schwerer zurecht kommt, da sie den Informationsfluss hemmen. Die basischen oder ungesättigten Carbs sind da eher von Nutzen, da sie den Körper sowohl mit Energie versorgen als auch bei der Entgiftung unterstützen. Der Körper kann zwar auch saure Carbs metabolisieren (was bei den Meisten eben auch der Fall ist), doch das hängt mit Nebeneffekten zusammen, die sich langfristig krankhaft (dis-eased) auf Körper und Geist auswirken.
+%Einige werden hier und dort die Stirn gerunzelt haben, wenn z.B. von süßen Salzen oder informiertem Wasser die Rede ist. Doch je mehr ich darüber schreibe, desto klarer wird, wie wichtig eine umfassende Aufklärung über die wahren Zusammenhänge ist, damit überhaupt eine gesunde Gesellschaft möglich wird. Ich schreibe hier lediglich über praktische Anwendungsmöglichkeiten, von denen ich auf die ein oder andere Art und Weise Wissen erlangt habe und sie nicht für mich alleine behalten möchte.
 
-Einige werden hier und dort die Stirn gerunzelt haben, wenn z.B. von süßen Salzen oder informiertem Wasser die Rede ist. Doch je mehr ich darüber schreibe, desto klarer wird, wie wichtig eine umfassende Aufklärung über die wahren Zusammenhänge ist, damit überhaupt eine gesunde Gesellschaft möglich wird. Ich schreibe hier lediglich über praktische Anwendungsmöglichkeiten, von denen ich auf die ein oder andere Art und Weise Wissen erlangt habe und sie nicht für mich alleine behalten möchte.
-
-\newpage
+% if pagenumber uneven, make newpage
+\checkoddpage\ifoddpage
+  \newpage\strut
+  \pagenumbering{gobble}\fi
 
 \end{document}
