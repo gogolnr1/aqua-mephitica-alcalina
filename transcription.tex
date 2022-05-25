@@ -92,6 +92,11 @@ von Dr. F. Diel, Physicus zu Dietz\\und Arzt im Baad Embs.
 }
 
 \newcommand{\fnadda}{, siehe Anhang \cfetext{Zu den Maßeinheiten}}
+\newcommand{\HorRule}[1]{\noindent\rule{\linewidth}{#1}} % Creating a horizontal rule
+\newcommand{\headruler}[1]{\begin{minipage}{#1}
+  \HorRule{2pt} \\[-0.85\baselineskip]
+  \HorRule{.7pt}
+\end{minipage}}%
 
 \begin{document}
 \pagenumbering{gobble}
@@ -104,7 +109,7 @@ von Dr. F. Diel, Physicus zu Dietz\\und Arzt im Baad Embs.
 
 \pagenumbering{arabic}
 \setcounter{page}{3}
-\fancyhead[C]{=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=} % Page numbering for center header
+\fancyhead[C]{\headruler{\textwidth}}
 
 \null
 \vfill
@@ -180,7 +185,7 @@ besonders aber in den Sorten des Wassers
 eine merkliche Verbesserung hervorbringen zu können;
 so dient noch folgendes zur Vorschrift:\\
 
-\fancyhead[C]{=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em= \thepage\kern+0.14em =\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=} % Page numbering for center header
+\fancyhead[C]{\headruler{1cm}~\thepage~\headruler{1cm}}
 
 Das Fachinger Wasser,
 noch vielen unseren Landsleuten zu wenig bekannt,
@@ -455,7 +460,7 @@ einen wesentlichen Dienst zu erweisen.
 \vfill
 
 \newpage
-\fancyhead[C]{=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em= \thepage\kern+0.14em =\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=}
+%\fancyhead[C]{=\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em= \thepage\kern+0.14em =\kern-0.14em=\kern-0.14em=\kern-0.14em=\kern-0.14em=}
 {\centering
     {\Large Nachricht an das Publikum,}\\
     {\small das}\\
