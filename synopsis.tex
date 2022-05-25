@@ -93,10 +93,10 @@ Hinweise auf die tatsächlich anzuwendende Umrechnung.
 Er gibt an,
 dass 5 \sfrac{1}{3} Quentchen insgesamt 330 Gran,
 sowie 3 Quentchen 40 Gran 220 Gran seien.
-Diese Rechnungen
-%\footnote{\cftext 330 Gran / 62 = 5,32 Quentchen,
-%resp. 3 * 60 Grane + 40 Gran = 220 Grane}
-legen nahe, dass 1 Quentchen insgesamt 60 oder 62 sind,
+Rechnerisch bedeutet das%
+\footnote{330 Gran / 62 = 5,32 Quentchen,
+resp. 3 * 60 Grane + 40 Gran = 220 Grane}%
+, dass 1 Quentchen insgesamt 60 oder 62 sind,
 wofür ich z.B. auch wikipedia.org keinerlei Hinweise gefunden habe.
 
 Folgende Bücher habe ich zu diesem Thema gefunden
@@ -142,8 +142,8 @@ einen Denar von 63 Gran zum Grunde.»}\\
 %Denmach ist anzunehmen das A. v. Stipriaan Luïsçius ein im ersten Zitat angedeutetes Gewichte-Set besessen und/oder diese römische resp. attische Rechengrundlage verwendet haben muss.
 Ausgehend von 63 Gran pro Quentchen
 und der in dem Zusammenhang erwähnten 252 Gran pro Silberschekel
-kommt man auf einen Wert von 6048 Gran pro römisches Pfund
-und lässt sich folgendermaßen herleiten:\\
+kommt man auf einen Wert von 6048 Gran pro römisches Pfund,
+was sich folgendermaßen herleiten lässt:\\
 
 \noindent
 \begin{minipage}{\linewidth}
@@ -202,21 +202,24 @@ so wie nach der \texttt{libra ponderali} nur 84 Drachmen
 oder Denarien dazu gezählt wurden,
 in so fern jede Drachme den siebenten Theil einer Unze ausmachte.»}\\
 
-62 Gran pro Quentchen
-ist der am nahe liegendste Wert,
-zu dem ich eine Referenz finden konnte,
-bzgl. der von A. v. Stipriaan Luïsçius angestellten Untersuchungen.%
+62 Gran pro Quentchen ist der
+-- bzgl. der von A. v. Stipriaan Luïsçius angestellten Untersuchungen%
 \footnote{Für 63 Gran pro Quentchen
 hätte er 5\sfrac{1}{4} anstatt 5\sfrac{1}{3} Quentchen
 für 330 Gran angeben müssen,
 resp. 3 Qu. 40 Gr. hätten 226 oder 229 Gran ergeben müssen,
-wären 62 resp. 63 Gran die Basis für ein Quentchen.}
+wären 62 resp. 63 Gran die Basis für ein Quentchen.}%
+-- am nahe liegendste Wert,
+zu dem ich eine Referenz finden konnte,
 Allerdings erscheint mir der Wert von 63 Gran pro Quentchen --
 wie im obigen Zitat erwähnt --
 der wahre zu sein,
 und kleinere Abweichungen in den Mess- bzw. Kontrollgewichten
 %kleinere Messfehler bzw. Übertragungsfehler Seitens Luïsçius
-sind auch nicht ganz auszuschließen. Daher entschied ich mich dazu, für alle weiteren Berechnungen von eben diesen 63 Gran pro Quentchen auszugehen. Das heißt also für die Übersicht:\\
+sind auch nicht ganz auszuschließen. Daher entschied ich mich dazu,
+für alle weiteren Berechnungen 
+von eben diesen 63 Gran pro Quentchen auszugehen. 
+Das heißt also für die Übersicht:\\
 
 \noindent
 \begin{minipage}{\linewidth}
@@ -260,7 +263,7 @@ Zr \= Oneeeeeeeeeeeeeeeeeeeeeee \= Twooo                 \kill
 \FPeval\y{round(330*\gramofgran:2)}
 Wenn also z.B. von 4 \Pfund\kern+0.14em Wasser die Rede ist,
 ergeben sich daraus umgerechnet \numprint{\x} Liter;
-bei bsw. 330 Gran ergeben sich umgerechnet \numprint{\y} Gramm.
+bei bspw. 330 Gran ergeben sich umgerechnet \numprint{\y} Gramm.
 
 % 1 Kubikzoll (Pariser) = \sfrac{10}{9} Kubikzoll (Rheinl.) = 19,8364 cm³ = ca. 1/50000 m³%
 Da nicht eindeutig aus dem Dokument hervorgeht,
@@ -345,8 +348,7 @@ welches nach Bedarf dem Wasser hinzugefügt werden kann.\\
 Die Herstellung dieses Salzes erfolgte wohl folgendermaßen:
 
 \begin{center}
-[ GRAFIK EINFÜGEN ]
-%\includegraphics[width=6cm, natwidth=640, natheight=480]{figures/setting.svg}
+\includegraphics[width=6cm]{figures/setting.png}
 %\includesvg[width = 6cm]{figures/setting}
 \end{center}
 
@@ -398,7 +400,7 @@ wären das insgesamt \numprint{\x} g resp. \numprint{\y} g Kaliumhydrogencarbona
 
 \FPeval\x{round(16*\gramofounce:0)}%
 \FPeval\x{round(3*\gramofgran*1000:0)}%
-Das rein mineralische Kaliumhydrogencarbonat hat einen weicheren Geschmack und würde von Einigen bevorzugt werden. Wenn man dieses auf ähnliche Weise wie oben beschrieben vit CO$_2$ sättigen würde, könne man davon \numprint{\x} mg in \numprint{\a} ml Wasser hinzugeben, ohne eine Geschmacksveränderung warzunehmen -- so Luïsçius.
+Das rein mineralische Kaliumhydrogencarbonat hat einen weicheren Geschmack und würde von Einigen bevorzugt werden. Wenn man dieses auf ähnliche Weise wie oben beschrieben mit CO$_2$ sättigen würde, könne man davon \numprint{\x} mg in \numprint{\a} ml Wasser hinzugeben, ohne eine Geschmacksveränderung warzunehmen -- so Luïsçius.
 
 Diese Art der Gewinnung von gesättigtem Kaliumhydrogencarbonat sei zwar recht aufwendig, doch man hätte damit die Möglichkeit, schnell ein Heilwasser von gehobener Potenz herzustellen, was die Nachteile überwiege -- insbesondere, wenn die Nachfrage steigen und das Kosten - Nutzen Verhältnis sich daher positiver gestalten würde.
 
@@ -421,13 +423,15 @@ bis es sich komplett aufgelöst hat
 und hätte auch so eine Weinsteinöl%
 \hyp{}artige Lösung hergestellt.\\
 
-Hoch alkalisches Wasser bedeutet Wasser mit einem ppm Wert nahe 0 und möglichst geringer ``saurer'' Sättigung, also negativ ionisiert bzw. mit einem hohen Anteil an molekularem Wasserstoff (H$_2$) -- was in heutiger Zeit auch als sog. ``EZ-Wasser''%
+Hoch alkalisches Wasser bedeutet Wasser mit einem ppm Wert nahe 0 und möglichst geringer ``saurer'' Sättigung, sprich negativ ionisiert bzw. mit einem hohen Anteil an molekularem Wasserstoff (H$_2$) -- was als sog. ``EZ-Wasser''%
 \footnote{``exclusion zone''}
 bekannt ist. Um dieses Herzustellen gibt es verschiedene technische und nicht-technische Varianten. Die sicherste, aber auch kostspieligste Art und Weise wäre, sich ein Gerät zu besorgen, welches sog. Kangen-Wasser herstellt. Dieses Gerät trennt effektiv positiv geladene Teilchen und gesättigte Salze von ionisiertem Wasser. Wenn das Gerät auf die höchste Stufe eingestellt ist, kommt aus dem Hahn also ein sauberes Wasser mit einem Ph-Wert von 11 oder mehr heraus. Um daraus gutes Weinsteinöl herzustellen, sollte man schon beim Auslassen des Wassers die Weinstein/Weinsäure Mischung in großer Menge in das zu befüllende Gefäß geben, damit das Wasser keine Zeit hat, sich aus der Luft wieder mit Sauerstoff zu sättigen.
 
-Für das Einflößen von CO$_2$ in das Weinsteinöl, für die Herstellung des o.g. Mittelsalzes, gibt es heute einfachere Methoden. Man kann sich dafür eines gewöhnlichen \emph{Wasser-Max}es bedienen -- dazu geht man einfach nach Anleitung vor, also so, als würde man gewöhnliches Wasser mit Kohlensäure versetzen wollen. Doch anstatt Wasser zu verwenden, füllt man das das Behältnis mit unserem hergestellten Weinsteinöl und drückt dann das CO$_2$ in den Behälter. Somit sollte der gleiche Effekt erzielt werden, wie der von Luïsçius' Aufbau; und es sollten sich Kristalle im Behältnis bilden, welche das sog. Mittelsalz ausmachen, nachdem die Kristalle auf gewöhnlichem Löschpapier getrocknet wurden.
+Eine weitere, günstigere Methode ist eine Umkehrosmose-Anlage, welche ebenfalls reines Wasser produziert. Einige Umkehrosmose-Anlagen remineralisieren das Wasser nach dem Filtern wieder, was für unsere Zwecke nicht gewünscht ist, da wir dieses gewissermaßen ja selbst beabsichtigen.
 
-An dieser Stelle nochmal der Hinweis, dass dieses
+Für das Einflößen von CO$_2$ in das Weinsteinöl, für die Herstellung des o.g. Mittelsalzes, gibt es heute einfachere Methoden. Man kann sich dafür eines gewöhnlichen \emph{Wasser-Max}es bedienen -- dazu geht man einfach nach Anleitung vor, also so, als würde man gewöhnliches Wasser mit Kohlensäure versetzen wollen. Doch anstatt Wasser zu verwenden, füllt man das das Behältnis mit unserem hergestellten Weinsteinöl und drückt dann das CO$_2$ in den Behälter. Somit sollte der gleiche Effekt erzielt werden, wie bei Luïsçius' Aufbau; und es sollten sich Kristalle im Behältnis bilden, welche das sog. Mittelsalz ausmachen, nachdem die Kristalle auf gewöhnlichem Löschpapier getrocknet wurden. Sicherlich kann man sich noch effektivere Trocknungsmethoden ausdenken.
+
+An dieser Stelle noch einmal der Hinweis, dass dieses
 Buch auf Github für alle zur Verfügung steht und
 Menschen mit tiefer gehenden Erfahrungen
 im Bereich der Chemie äußerst willkommen sind,
@@ -437,13 +441,17 @@ den Inhalt hier zu vervollständigen bzw. zu korrigieren.
 
 \section{Weiterführende Gedanken}
 
-Um dem Ganzen noch die Krone auszusetzen, könnte man sich Methoden überlegen, das Mittelsalz mit zusätzlichen Elektrolyten zu versehen. Bisher enthält das Mittelsalz nur Kalium und Calcium aus dem Weinstein, als elementares Elektrolyt. Um dieses jedoch \emph{so} zu betreiben, dass auch ein angemessenes Verhältnis der jeweiligen Elektrolyte zueinander herrscht, bedarf es weiteren Nachforschungen, die ich an dieser Stelle noch nicht tätigen konnte -- geschweige denn selber Experimente durchzuführen, die dies alles in der Praxis zeigen könnten.
+Um dem Ganzen noch die Krone auszusetzen, könnte man sich Methoden überlegen, das Mittelsalz mit zusätzlichen Elektrolyten zu versehen. Bisher enthält das Mittelsalz ``nur'' Kalium und Calcium aus dem Weinstein, als elementares Elektrolyt. Um dieses jedoch \emph{so} zu betreiben, dass auch ein angemessenes Verhältnis der jeweiligen Elektrolyte zueinander herrscht, bedarf es weiteren Nachforschungen, die ich an dieser Stelle noch nicht tätigen konnte -- geschweige denn selber Experimente durchzuführen, die dies alles in der Praxis zeigen könnten.
 
-Was mir dazu allerdings in den Sinn kommt, wäre, die sog. Schüssler-Salze in empfohlener Zusammensetzung und in entsprechender Quantität zu nehmen, diese in das Gefäß zu geben, in welches das Kangen-Wasser gefüllt wird, und somit ein ``Weinsteinöl-\emph{Plus}'' zu erhalten, welches dann nach beschriebener Art mit Kohlensäure versetzt ein Mittelsalz-\emph{Plus} ergeben dürfte. Diese könnte man dann nach Belieben entweder in Wasser auflösen oder in seinen Joghurt geben, und sich so seine tägliche Dosis Elektrolyte zuführen.
+Was mir dazu allerdings in den Sinn kommt, wäre, die sog. Schüssler-Salze in empfohlener%
+\footnote{``empfohlen'' ist hier sehr allgemein formuliert, je nach Typ Mensch kann sich das Verhältnis der einzelnen Salze zueinander unterscheiden. Wer dieses astrologisch bzw. geisteswissenschaftlich aufarbeiten möchte, der kann sich z.B. folgendes Buch von George W. Carey genauer ansehen: \href{https://archive.org/details/ZodiacAndTheSaltsOfSalvationGeorgeWCarey}{archive.org/details/ZodiacAndTheSaltsOfSalvationGeorgeWCarey}}
+Zusammensetzung und in entsprechender Quantität zu nehmen, diese in das Gefäß zu geben, in welches das Kangen-Wasser gefüllt wird, und somit ein ``Weinsteinöl-\emph{Plus}'' zu erhalten, welches dann nach beschriebener Art mit Kohlensäure versetzt ein Mittelsalz-\emph{Plus} ergeben dürfte. Diese könnte man dann nach Belieben entweder in Wasser auflösen oder in seinen Joghurt geben, und sich so seine tägliche Dosis Elektrolyte zuführen.
 
-Alternativ kauft man sich einfach direkt ein Elektrolyt Ergänzungsmittel beim Händler seines Vertrauens und tut davon etwas in sein Wasser. Wobei ich die Erfahrung gemacht habe, dass das Wasser dadurch eben einen sehr unangenehmen Geschmack erhält. Hier würde ich folgendes probieren: Umkehrosmosewasser mit dem Wassermax ``sauer'' machen und dort die gekauften Elektrolyte hinzufügen, dieses sollte die Säure neuralisieren und für einen relativ geschmacksneutrales Elekrolytwasser sorgen. Oder eher: die Elektrolyte -- welche ja nichts anderes sind, als Mineralsalze -- vorher in das Behältnis geben, in welches das Kangenwasser läuft, und dieses dann mit dem Wassermax strukturell und geschmacklich stabilisieren.
+Alternativ kauft man sich ein Elektrolyt Ergänzungsmittel beim Händler seines Vertrauens und tut davon etwas in sein Wasser. Wobei ich die Erfahrung gemacht habe, dass das Wasser dadurch eben einen sehr unangenehmen Geschmack erhält. Hier würde ich folgendes probieren: Umkehrosmosewasser mit dem Wassermax ``sauer'' machen und dort die gekauften Elektrolyte hinzufügen, dieses sollte für einen relativ geschmacksneutrales Elekrolytwasser sorgen. Oder eher: die Elektrolyte -- welche ja nichts anderes sind, als Mineralsalze -- vorher in das Behältnis geben, in welches das Kangenwasser läuft, und dieses dann mit dem Wassermax strukturell und geschmacklich stabilisieren.
 
-Besonders für Freunde des regelmäßigen Fastens dürfte dieses ein sehr willkommenes Mittel sein, um in der Fastenzeit mit den lebensnotwendigen Spurenelementen versorgt zu werden. Fasten führt -- richtig durchgeführt -- zwar zu dem erwünschten Effekt, dass sich der Körper durch Stoffwechselanpassung aus körpereigenen organischen und nicht-organischen "Rücklagen" bedient und sich so auch indirekt selber entgiftet. Sind diese Rücklagen jedoch aufgebraucht, ist eine externe Versorgung von nicht-organischen Mineralsalzen absolut notwendig, damit Körper und Geist keinen Schaden nehmen. Im äußersten Fall reagiert der Körper bei Mangel an gerade benötigten Mineralsalzen immer mit Fieber, um die Stoffe aufwendig aus Knochensubstanz und -mark "auszukochen" -- was zu beschleunigtem Abbau der Knochendichte, namentlich Osteoporose oder Ähnlichem, führen kann.
+Besonders für Freunde des regelmäßigen Fastens dürfte dieses ein sehr willkommenes Mittel sein, um in der Fastenzeit mit den lebensnotwendigen Spurenelementen versorgt zu werden. Fasten führt -- richtig durchgeführt -- zwar zu dem erwünschten Effekt, dass sich der Körper durch Stoffwechselanpassung aus seinen Zelleinlagerungen bedient und sich so auch selber entgiftet. Sind diese Rücklagen jedoch aufgebraucht, ist eine externe Versorgung Mineralsalzen absolut notwendig, damit Körper und Geist keinen Schaden nehmen. Im äußersten Fall reagiert der Körper bei Mangel an gerade benötigten Mineralsalzen immer mit Fieber, um die Stoffe aufwendig aus Knochensubstanz und -mark ``auszukochen'' -- was zu beschleunigtem Abbau der Knochendichte führen kann.
+
+Auch und insbesondere für den alltäglichen Gebrauch ist es meines Erachtens die Mühe wert, sich all dieses näher anzusehen. Alleine deswegen schon, da die Nährwerte der ``herkömmlichen Nahrungsmitteln'' in den Jahren kontinuiertlich gesunken sind, kann es daher ratsam sein, sich selber ein gewisses Maß an Mineralien selbst effektiv über das Wasser zuzuführen.
 %% stop here
 %\newpage
 
