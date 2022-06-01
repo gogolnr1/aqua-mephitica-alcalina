@@ -1,7 +1,6 @@
 #!/bin/sh
 
 readonly SRCFILE=$1 #"_bundle.pdf"
-readonly DESTFILE="reordered_$1"
 command -v pdfinfo || exit 1
 
 # pdf page count has to equal a factor of four
@@ -27,8 +26,9 @@ make_booklet_order() {
   for i in $(seq 1 $((count/2))); do
       value=$(set_by_evenness $i)
       both+=$value
-      #frontpage+=$value
-      #backpage+=$value
+      [ $((i%2)) -eq 0 ] && \
+        backpage+=$value || \
+        frontpage+=$value
   done
 }
 
@@ -46,4 +46,6 @@ set_by_evenness() {
 make_booklet_order
 
 #pdfjam --landscape --scale 0.9 --twoside --nup 2x1
-pdfjam --landscape --nup 2x1 --outfile $DESTFILE $both
+pdfjam --landscape --nup 2x1 --outfile "_reordered_$SRCFILE" $both
+pdfjam --landscape --nup 2x1 --outfile "_reordered_front_$SRCFILE" $frontpage
+pdfjam --landscape --nup 2x1 --outfile "_reordered_back_$SRCFILE" $backpage
