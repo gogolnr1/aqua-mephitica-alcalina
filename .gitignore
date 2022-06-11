@@ -1,3 +1,12 @@
+*.log
+*.out
+*.aux
+
+figures/src/
+
+tex/**
+!tex/*.tex
+
 .Rproj.user
 .Rhistory
 .RData
