@@ -29,6 +29,7 @@
 \usepackage[nomessages]{fp}
 
 \externaldocument{transcription}
+\interfootnotelinepenalty=10000
 
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
@@ -182,7 +183,7 @@ alter Goldmünzen gefundenes römisches Pfund genau dasselbe,
 das man durch die obige Berechnung erhält
 und muß daher das richtige und Wahre sein.»}\\
 
-Im dritterwähnten Buch von \emph{Johann Potters}
+Im dritterwähnten Buch von Johann Potters
 heißt es auf Seite 155:\\
 
 \emph{«Eben diese Summe%
@@ -331,8 +332,8 @@ In dem beschriebenen Fall konnten
 \FPeval\x{round(90*\gramofgran:1)}%
 \FPeval\y{round(180*\gramofgran:1)}%
 noch \mbox{\numprint{\x} g} Pottasche bzw. \mbox{\numprint{\y} g} Natron
-dem gewöhlichen Fachinger Wasser hinugefügt werden,
-ohne dass der Geschmack unangenehm wurde
+dem gewöhlichen Fachinger Wasser hinugefügt werden
+ohne dass der Geschmack unangenehm würde
 oder sich andere Schwebstoffe später
 nicht wieder mit der Kohlensäure verbunden hätten.
 \FPeval\a{round(16*\gramofounce:0)}%
@@ -396,8 +397,8 @@ dass sein salziger Geschmack dabei fast nicht mehr wahrzunehmen ist.
 Mit diesem Mittelsalz kann man dann beliebig hantieren, 
 sprich in diesem Fall wurden\xspace \numprint{\x} g davon 
 in \numprint{\a} ml Wasser getan, 
-ohne dass der Geschmack sich drastisch geändert hätte; 
-zur Not kann das sogar bis zu \numprint{\y} g hoch getrieben werden.
+ohne dass sich der Geschmack drastisch verändert hätte; 
+zur Not könne dieses sogar bis zu \numprint{\y} g hochdosiert werden.
 
 \FPeval\a{round(16*\gramofounce:0)}%
 \FPeval\x{round(22.5*\gramofgran:1)}%
@@ -449,7 +450,7 @@ sehe ich dafür folgende Möglichkeiten:\\
 a) durch das sog. ``Kalken''.
 Man vermische dazu gewöhnliches Weinstein Backpulver
 mit Weinsäure(E334) und ggf. etwas Kalk,
-was verstärkt Wasserstoff aus der Luft anziehen sollte
+was verstärkt Wasserstoff aus der Luft anzieht
 und sich so in der Reaktion
 zu flüssigem Weinsteinöl formieren würde.%
 \footnote{Auf Seite \pageref{whitewashing} seiner Schrift 
@@ -458,26 +459,37 @@ beschreibt Luïsçius diese Methode.}\\
 b) man fügt so lange zu Weinstein und Weinsäure
 destilliertes, möglicht alkalisches Wasser hinzu,
 bis es sich komplett aufgelöst hat
-und hätte auch so eine Weinsteinöl%
-\hyp{}artige Lösung hergestellt.\\
+und hätte auch so eine weinsteinölartige Lösung hergestellt.\\
 
 Hoch alkalisches Wasser 
-bedeutet Wasser mit einem ppm Wert nahe 0 
-und möglichst geringer ``saurer'' Sättigung, 
-sprich negativ ionisiert 
-bzw. mit einem hohen Anteil an molekularem Wasserstoff (H$_2$) 
--- was als sog. ``EZ-Wasser''%
-\footnote{``exclusion zone''}
+hat eine geringe saure Sättigung,
+also ein hohen Anteil negativ geladene (ionisierte) Wasserstoffmoleküle 
+bzw. einem hohen Anteil an molekularem Wasserstoff
+-- was als sog. EZ-Wasser%
+\footnote{\emph{Exclusion Zone Water, H9 Water, hexagonales Wasser, auch EC-Wasser}
+  -- Eine Substanz mit der Summenformel H$_3$O$_2$.
+  Ein halbkristallines Zwischenstadium von Wasser
+  zwischen Vereisung und Schmelze,
+  welches als 4. Aggregatzustand von Wasser bezeichnet werden kann
+  (\href{https://www.umh.at/pdf/Prof_Pollack_Energetisiertes_Wasser.pdf}{www.umh.at/pdf/Prof\_Pollack\_Energetisiertes\_Wasser.pdf}).}
 bekannt ist. 
 Um dieses Herzustellen gibt es verschiedene technische 
 und nicht-technische Varianten. 
-Eine sichere, aber auch kostenintensive Art und Weise wäre, 
-sich ein Gerät zu besorgen, welches sog. Kangen-Wasser herstellt. 
-Dieses Gerät trennt effektiv positiv geladene Teilchen 
-und gesättigte Salze von ionisiertem Wasser. 
-Wenn das Gerät auf die höchste Stufe eingestellt ist, 
-kommt aus dem Hahn also ein sauberes Wasser 
-mit einem Ph-Wert von 11 oder mehr heraus. 
+
+Die sicherste 
+aber auch kostenintensive Art und Weise der Herstellung,
+die ich mit vorstellen kann wäre, 
+sich ein Gerät zu besorgen, welches sog. Kangen-Wasser%
+\footnote{\emph{Kangen Wasser} ist eine Bezeichnung 
+für technisch erzeugtes EZ-Wasser. 
+EZ-Wasser kommt in der Natur überall ganz natürlich vor, 
+z.B. in Bächen, Obst oder Gemüse. 
+Mit speziellen Ionisationsapparaten wird ein Wasser erzeugt,
+welches der natürlichen Struktur von Wasser sehr nahe kommt.}
+herstellt.
+Wenn dieses Gerät auf die höchste Stufe eingestellt ist, 
+kommt aus dem Hahn ein strukturiertes Wasser 
+mit einem Ph-Wert von bis zu 11 heraus. 
 Um daraus gutes Weinsteinöl herzustellen, 
 sollte man schon beim Auslassen des Wassers 
 die Weinstein/Weinsäure Mischung in großer Menge 
@@ -485,11 +497,7 @@ in das zu befüllende Gefäß geben,
 damit das Wasser keine Zeit hat, 
 sich aus der Luft wieder mit Sauerstoff zu sättigen.
 
-Eine weitere, günstigere Methode wäre eine Umkehrosmose-Anlage, 
-welche ebenfalls reines Wasser produziert. 
-Einige Umkehrosmose-Anlagen remineralisieren das Wasser nach dem Filtern wieder, 
-was für unsere Zwecke nicht gewünscht ist, 
-da wir dieses gewissermaßen ja selbst beabsichtigen.
+%Andere Methoden anbieten
 
 Für das Einflößen von CO$_2$ in das Weinsteinöl, 
 sprich für die Herstellung des o.g. Mittelsalzes, 
@@ -519,7 +527,7 @@ den Inhalt hier zu vervollständigen bzw. zu korrigieren.
 Man könnte sich weiterhin Methoden überlegen, 
 das Mittelsalz mit zusätzlichen Elektrolyten zu versehen. 
 Bisher enthält das beschriebene Mittelsalz 
-als elementares Elektrolyt 
+als elementare Elektrolyte
 ``nur'' Kalium und Calcium aus dem Weinstein. 
 Um dieses jedoch \emph{so} zu betreiben, 
 dass auch eine Verhältnismäßigkeit 
@@ -529,23 +537,21 @@ die ich an dieser Stelle noch nicht tätigen konnte
 -- geschweige denn selber Experimente durchzuführen, 
 die dies alles in der Praxis zeigen könnten.
 
-Was mir dazu allerdings in den Sinn kommt, wäre, 
+Was mir dazu allerdings in den Sinn kommt wäre, 
 die sog. Schüssler-Salze richtig zu kombinieren,%
-%in empfohlener%
 \footnote{je nach Typ Mensch kann sich das Verhältnis 
 der einzelnen Salze zueinander unterscheiden. 
 Wer dieses astrologisch bzw. geisteswissenschaftlich aufarbeiten möchte, 
 der kann sich z.B. folgendes Buch von George W. Carey genauer ansehen: 
 \href{https://archive.org/details/ZodiacAndTheSaltsOfSalvationGeorgeWCarey}{archive.org/details/ZodiacAndTheSaltsOfSalvationGeorgeWCarey}}
-%Zusammensetzung und in entsprechender Quantität zu nehmen, 
-diese in das Gefäß zu geben, 
-in welches das Kangen/EZ/Umkehrosmose-Wasser gefüllt wird, 
+diese in das Gefäß zu geben
+in welches das Kangen/EZ/Umkehrosmose-Wasser gefüllt wird
 und somit ein ``Weinsteinöl-\emph{Plus}'' zu erhalten, 
 welches dann nach beschriebener Art mit Kohlensäure versetzt 
 ein Mittelsalz-\emph{Plus} ergeben dürfte. 
 Diese könnte man dann nach Belieben entweder in Wasser auflösen 
 oder z.B. in seinen Joghurt geben 
--- und sich so seine tägliche Dosis Elektrolyte zuführen.
+-- und sich so seine Elektrolytreserven aufzufüllen.
 
 Alternativ kauft man sich ein Elektrolyt-Ergänzungsmittel 
 beim Händler seines Vertrauens 
@@ -606,8 +612,6 @@ sich seber ein gewisses Maß an Mineralien
 %Der Schlüssel ist also das richtige Verhältnis und die richtige Menge der entsprechenden Salze. Proteine sind nichts weiter als Salze in einer entsprechenden chemischen Zusammensetzung. Während Fette Kohlen-Sauerstoffverbindungen sind, welche gesättigt nützliche oder weniger nützliche Salze enthalten \emph{können}, während sie in ungesättigter Form einem leichteren Abtransport von festen Stoffen im Körper dienen.\\
 
 %Das ist auch der Grund, warum eine sog. ``Low-Carb'' Ernährung so gut funktioniert. Damit sind allerdings nur \emph{die} Carbs bzw. Kohlenstoffe gemeint, welche übermäßig mit sauren Salzen gesättigt sind, mit welchen der Körper schwerer zurecht kommt, da sie den Informationsfluss hemmen. Die basischen oder ungesättigten Carbs sind da eher von Nutzen, da sie den Körper sowohl mit Energie versorgen als auch bei der Entgiftung unterstützen. Der Körper kann zwar auch saure Carbs metabolisieren (was bei den Meisten eben auch der Fall ist), doch das hängt mit Nebeneffekten zusammen, die sich langfristig krankhaft (dis-eased) auf Körper und Geist auswirken.
-
-%Einige werden hier und dort die Stirn gerunzelt haben, wenn z.B. von süßen Salzen oder informiertem Wasser die Rede ist. Doch je mehr ich darüber schreibe, desto klarer wird, wie wichtig eine umfassende Aufklärung über die wahren Zusammenhänge ist, damit überhaupt eine gesunde Gesellschaft möglich wird. Ich schreibe hier lediglich über praktische Anwendungsmöglichkeiten, von denen ich auf die ein oder andere Art und Weise Wissen erlangt habe und sie nicht für mich alleine behalten möchte.
 
 % if pagenumber uneven, make newpage
 \checkoddpage\ifoddpage
